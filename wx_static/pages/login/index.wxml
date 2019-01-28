@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<scroll-view scroll-y class="container">
+
+  <!-- 登录按钮 -->
+
+  <button
+  class="btn"
+  open-type="getUserInfo"
+  bindgetuserinfo="getUserInfo"
+>
+新年祝福
+</button>
+
+</scroll-view>

@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/login/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "登录实例",
+    "navigationBarTextStyle": "black"
+  }
+
+}
