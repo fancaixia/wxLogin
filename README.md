@@ -14,6 +14,8 @@
 
 ### 后台思路：
 
+**注：为了前台演示方便，本项目不涉及数据库，将数据存在node服务端**
+
 **/api/login  登录接口**
 
 1. 调用微信api   jscode2session对应接口 传递参数 code（前台传递），appid（小程序id），secret（小程序密钥），grant_type（微信授权默认：authorization_code）获取openid 和session_key
@@ -25,8 +27,6 @@
 4. 数据库存在 openid ，那么更新数据库openid对应token
 
 5. 返回openid和token到前台
-
-**注：为了前台演示方便，本项目不涉及数据库，将数据存在node服务端**
 
 
 **/api/bless  数据列表  前台传入需token和openid**
