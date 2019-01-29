@@ -10,30 +10,30 @@
 
 3. 点击取消授权则停在登录页面	
 
-4. 授权成功前台调用wx.request  向后台发送code，rawData ( 授权成功返回值 )，signature ( 授权成功返回值 )  获取tocken和openid
+4. 授权成功前台调用wx.request  向后台发送code，rawData ( 授权成功返回值 )，signature ( 授权成功返回值 )  获取tocken
 
 ### 后台思路：
 
-**注：为了前台演示方便，本项目不涉及数据库，将数据存在node服务端**
+**注：为了前台演示方便，本项目不涉及数据库，将数据存在node服务端----模拟数据库存储**
 
 **/api/login  登录接口**
 
-1. 调用微信api   jscode2session对应接口 传递参数 code（前台传递），appid（小程序id），secret（小程序密钥），grant_type（微信授权默认：authorization_code）获取openid 和session_key
+1. 调用微信api接口jscode2session 传递参数 code（前台传递），appid（小程序id），secret（小程序密钥），grant_type（微信授权默认：authorization_code）获取openid 和session_key
 
-2. 使用 前台传入的rawData ( 微信授权返回值 )和openid  生成 token  
+2. 使用 前台传入的rawData ( 微信授权返回值 )和openid 生成 token  
 
 3. 数据库中查找 openid ，没有就插入{openid ， token, session_key } 
 
 4. 数据库存在 openid ，那么更新数据库openid对应token
 
-5. 返回openid和token到前台
+5. 返回token到前台
 
 
 **/api/bless  数据列表  前台传入需token和openid**
 
-1. 检测token，数据库中查找 openid ，没有openid 就返回前台token失效（前台返回登录页面）
+1. 检测token，数据库中查找 token（前台传入） ，数据库没有对应token  就返回前台token失效（前台返回登录页面）
 
-2. 数据库存在 openid ，那么就使用token和openid解密
+2. 数据库存在 token ，那么就使用token解密
 
 
 ### 项目启动
