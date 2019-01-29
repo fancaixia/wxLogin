@@ -20,9 +20,9 @@
 
 1. 调用微信api   jscode2session对应接口 传递参数 code（前台传递），appid（小程序id），secret（小程序密钥），grant_type（微信授权默认：authorization_code）获取openid 和session_key
 
-2. 使用session_key 和openid  生成 token  
+2. 使用 前台传入的rawData ( 微信授权返回值 )和openid  生成 token  
 
-3. 数据库中查找 openid ，没有就插入{openid ， token } 
+3. 数据库中查找 openid ，没有就插入{openid ， token, session_key } 
 
 4. 数据库存在 openid ，那么更新数据库openid对应token
 
