@@ -32,8 +32,6 @@ Page({
         }
       }
     })
-
-
     //判断是点击授权  点击拒绝停在登录页面
     if (!userInfo.detail.rawData || !userInfo.detail.signature){
         wx.showModal({
@@ -70,7 +68,6 @@ Page({
           // 把自定义登录状态 token 缓存到小程序缓存
           try {
             wx.setStorageSync('token', response.data.token);
-            wx.setStorageSync('openid', response.data.openid);
 
           } catch (e) { 
 
@@ -92,8 +89,7 @@ Page({
  
         }
       }
-    )
-      .catch(error => {
+    ).catch(error => {
         // 服务端产生异常 重新获取code，因为code只能使用一次
         app.login().then((res) => {
           app.globalData.code = res;
