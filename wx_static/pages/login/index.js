@@ -51,9 +51,6 @@ Page({
     service({
       url: getToken.url,  
       method: "post",
-      header: {
-        "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
-      },
       data: {
         code: app.globalData.code,
         rawData: userInfo.detail.rawData,
