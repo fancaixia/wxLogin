@@ -27,7 +27,7 @@ Page({
       service({
         url: getBless.url,
         data: {
-          token: wx.getStorageSync("token")||'',
+          
         },
         method: "POST",
       })
