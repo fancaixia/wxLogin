@@ -17,7 +17,7 @@ Page({
     if (!wx.getStorageSync("token")) {
 
       //没有token  进入登陆页面
-      wx.navigateTo({
+      wx.redirectTo({
         url: "/pages/login/index"
       });
       return;
@@ -46,7 +46,7 @@ Page({
               data: '',
 
             });
-            wx.navigateTo({
+            wx.redirectTo({
               url: "/pages/login/index"
             });
 
