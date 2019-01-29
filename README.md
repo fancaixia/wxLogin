@@ -51,3 +51,7 @@ wx_server 为服务端 ， wx_static  为小程序端
 **前台**
 
 1. cd / wx_static   修改config.js 中 serverHost对应IP为本机IP
+
+
+
+**注：node服务端使用 jsonwebtoken  生成token, 想了解过期时间以及token其他信息推荐文章**[https://ninghao.net/blog/2834](https://ninghao.net/blog/2834)
