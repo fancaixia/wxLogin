@@ -33,7 +33,7 @@
 
 1. 检测token，数据库中查找 openid ，没有openid 就返回前台token失效（前台返回登录页面）
 
-2. 数据库存在 openid ，那么就使用token和openid解密  解密成功更新数据库openid对应token
+2. 数据库存在 openid ，那么就使用token和openid解密
 
 
 ### 项目启动
