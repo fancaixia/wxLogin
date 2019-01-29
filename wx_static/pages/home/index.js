@@ -28,7 +28,6 @@ Page({
         url: getBless.url,
         data: {
           token: wx.getStorageSync("token")||'',
-          openid: wx.getStorageSync("openid") || ''
         },
         method: "POST",
       })
