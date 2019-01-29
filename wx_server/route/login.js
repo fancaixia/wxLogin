@@ -88,9 +88,7 @@ route_login.post('/login',(_req,_res)=>{
 })
 route_login.post('/bless',(req,res)=>{
 
-    // let clienttoken = req.body.token;
-    let clienttoken = req.headers.token;
-    console.log(clienttoken, " :clinettoken")
+     let clienttoken = req.headers.token;
 
     //检测 token 时，数据库中查找 token  没有就返回token失效  有的话就使用token对应openid 解密
     let tokenFlag = false;  //是否存在token标记
