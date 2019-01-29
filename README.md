@@ -29,7 +29,7 @@
 5. 返回token到前台
 
 
-**/api/bless  数据列表  前台传入需token和openid**
+**/api/bless  数据列表  前台传入需token**
 
 1. 检测token，数据库中查找 token（前台传入） ，数据库没有对应token  就返回前台token失效（前台返回登录页面）
 
