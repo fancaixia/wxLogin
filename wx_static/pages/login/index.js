@@ -69,7 +69,7 @@ Page({
           } catch (e) { 
 
           }
-          wx.navigateBack({
+          wx.redirectTo({
             url: '/pages/home/index'
           })
         } else {
