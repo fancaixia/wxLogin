@@ -42,7 +42,7 @@ wx_server 为服务端 ， wx_static  为小程序端
 
 若要演示登录全过程以及登录成功后  请求其他接口时后端检测token 是否合法， 则需要启动node
 
-1. cd / wx_server
+1. cd / wx_server  （config.js 修改appid和secret）
 
 2. npm / cnpm   install   ( 安装依赖 ）
 
