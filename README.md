@@ -55,3 +55,7 @@ wx_server 为服务端 ， wx_static  为小程序端
 
 
 **注：node服务端使用 jsonwebtoken  生成token, 想了解过期时间以及token其他信息推荐文章**[https://ninghao.net/blog/2834](https://ninghao.net/blog/2834)
+
+### 如果这篇文章对你有帮助，请帮忙扫描二维码，或微信搜索小程序(幼教学园)，帮忙点击页面，感谢
+![https://github.com/fancaixia/wxLogin/blob/master/pic/youjiaoxueyuan.png](https://github.com/fancaixia/wxLogin/blob/master/pic/youjiaoxueyuan.png)
+
